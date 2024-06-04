@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% block title %}Меню{% endblock %}
+{% block content %}
+<div class="list-group">
+    <a href="{{ url_for('add_estate') }}" class="list-group-item list-group-item-action">Добавить недвижимость</a>
+    <a href="{{ url_for('add_advert') }}" class="list-group-item list-group-item-action">Добавить объявление</a>
+    <a href="{{ url_for('change_estate_status') }}" class="list-group-item list-group-item-action">Изменить статус недвижимости</a>
+    <a href="{{ url_for('change_advert_status') }}" class="list-group-item list-group-item-action">Изменить статус объявления</a>
+    <a href="{{ url_for('withdraw') }}" class="list-group-item list-group-item-action">Вывести средства</a>
+    <a href="{{ url_for('get_balance') }}" class="list-group-item list-group-item-action">Получить баланс</a>
+    <a href="{{ url_for('get_estates') }}" class="list-group-item list-group-item-action">Список недвижимости</a>
+    <a href="{{ url_for('get_adverts') }}" class="list-group-item list-group-item-action">Список объявлений</a>
+    <a href="{{ url_for('buy_estate') }}" class="list-group-item list-group-item-action">Купить недвижимость</a>
+    <a href="{{ url_for('logout') }}" class="list-group-item list-group-item-action text-danger">Выход</a>
+</div>
+{% endblock %}

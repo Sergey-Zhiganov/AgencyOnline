@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+{% block title %}Вывести средства{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Вывести средства</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label for="amount">Сумма</label>
+            <input type="number" class="form-control" id="amount" name="amount" required>
+        </div>
+        <div class="form-group">
+            <label for="currency">Валюта</label>
+            <input type="text" class="form-control" id="currency" name="currency" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Вывести</button>
+        <a href="{{ url_for('menu') }}" class="btn btn-secondary">Назад</a>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,5 @@
+
+admin.peers
+eth.blockNumber
+eth.syncing
+eth.accounts

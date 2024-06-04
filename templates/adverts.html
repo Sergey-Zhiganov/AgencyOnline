@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+{% block title %}Список объявлений{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Список объявлений</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID Недвижимости</th>
+                <th>Цена</th>
+                <th>Валюта</th>
+                <th>Статус</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for advert in adverts %}
+            <tr>
+                <td>{{ advert[0] }}</td>
+                <td>{{ advert[1] }}</td>
+                <td>{{ advert[2] }}</td>
+                <td>{{ advert[3] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('menu') }}" class="btn btn-secondary">Назад</a>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block title %}Изменить статус объявления{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Изменить статус объявления</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label for="estate_id">ID Недвижимости</label>
+            <input type="number" class="form-control" id="estate_id" name="estate_id" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Изменить</button>
+        <a href="{{ url_for('menu') }}" class="btn btn-secondary">Назад</a>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+{% block title %}Список недвижимости{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Список недвижимости</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Имя</th>
+                <th>Номер</th>
+                <th>Адрес</th>
+                <th>Тип</th>
+                <th>Площадь</th>
+                <th>Статус</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for estate in estates %}
+            <tr>
+                <td>{{ estate[0] }}</td>
+                <td>{{ estate[1] }}</td>
+                <td>{{ estate[2] }}</td>
+                <td>{{ estate[3] }}</td>
+                <td>{{ estate[4] }}</td>
+                <td>{{ estate[5] }}</td>
+                <td>{{ estate[6] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('menu') }}" class="btn btn-secondary">Назад</a>
+</div>
+{% endblock %}
